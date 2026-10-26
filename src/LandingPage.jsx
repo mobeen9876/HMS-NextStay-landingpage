@@ -8,6 +8,9 @@ import "./landing.css";
 // Real app URL — all login/sign-in/get-started buttons point here
 const LOGIN_URL = import.meta.env.VITE_LOGIN_URL || "https://nexstay.daisy-etm.com";
 
+// Brand name
+const BRAND = "MANSIVO";
+
 const NAV = [
   { href: "#features", label: "Features" },
   { href: "#how", label: "How it works" },
@@ -41,11 +44,11 @@ const MODULES = [
 ];
 
 const FAQ = [
-  { q: "Can I manage more than one hotel?",    a: "Yes. NexStay supports multiple hotels, each with its own rooms, staff and settings, managed by admins." },
+  { q: "Can I manage more than one hotel?",    a: "Yes. MANSIVO supports multiple hotels, each with its own rooms, staff and settings, managed by admins." },
   { q: "Which languages are supported?",       a: "The app is available in English and Albanian, and you can switch language from inside the app." },
   { q: "Can different staff see different things?", a: "Yes. Roles and permissions control which sections and actions each staff member can access, for example reception versus housekeeping." },
   { q: "Does it work on phones and tablets?",  a: "Yes. The interface is responsive, so reception and housekeeping can use it on any device." },
-  { q: "How do I get started?",                a: "Log in to your NexStay account. If you don't have one yet, contact your administrator or the NexStay team to get access." },
+  { q: "How do I get started?",                a: "Log in to your MANSIVO account. If you don't have one yet, contact your administrator or the MANSIVO team to get access." },
 ];
 
 /* ─── Mock calendar (purely decorative) ─── */
@@ -107,7 +110,7 @@ const LandingPage = () => {
 
   useEffect(() => {
     const prev = document.title;
-    document.title = "NexStay – Smart Hotel Management";
+    document.title = "MANSIVO – Hotel Management System";
     return () => { document.title = prev; };
   }, []);
 
@@ -126,8 +129,8 @@ const LandingPage = () => {
       {/* ── Navbar ── */}
       <header className="nx-nav">
         <div className="nx-container nx-nav__inner">
-          <a href="/" className="nx-nav__logo" aria-label="NexStay home" onClick={handleLogoClick}>
-            <img src="/LogoH.png" alt="NexStay – Smart Hotel Management" />
+          <a href="/" className="nx-nav__logo" aria-label="MANSIVO home" onClick={handleLogoClick}>
+            <img src="/logo2.png" alt="MANSIVO – Hotel Management System" />
           </a>
           <nav className="nx-nav__links" aria-label="Main">
             {NAV.map((n) => <a key={n.href} href={n.href}>{n.label}</a>)}
@@ -165,7 +168,7 @@ const LandingPage = () => {
               </span>
               <h1>Run your hotel <span>smarter</span>, from one place.</h1>
               <p className="nx-lead">
-                NexStay brings reservations, rooms, guests, billing, housekeeping and reports
+                MANSIVO brings reservations, rooms, guests, billing, housekeeping and reports
                 together, so your team spends less time on admin and more time on guests.
               </p>
               <div className="nx-hero__actions">
@@ -191,7 +194,7 @@ const LandingPage = () => {
             <div className="nx-head nx-reveal">
               <span className="nx-eyebrow">Features</span>
               <h2>Everything your property needs</h2>
-              <p>From the front desk to housekeeping to the back office, NexStay covers the daily work of running a hotel.</p>
+              <p>From the front desk to housekeeping to the back office, MANSIVO covers the daily work of running a hotel.</p>
             </div>
             <div className="nx-features">
               {FEATURES.map(({ icon: Icon, title, text, tone }, i) => (
@@ -221,7 +224,7 @@ const LandingPage = () => {
                 <li><Check size={18} /> Invoices with taxes, banks and payment methods</li>
                 <li><Check size={18} /> Booking sources and agencies tracked per reservation</li>
               </ul>
-              <a href={LOGIN_URL} className="nx-btn nx-btn--primary">Open NexStay <ArrowRight size={18} /></a>
+              <a href={LOGIN_URL} className="nx-btn nx-btn--primary">Open MANSIVO <ArrowRight size={18} /></a>
             </div>
             <div className="nx-panel nx-reveal" aria-hidden="true">
               <h4>Today at the front desk</h4>
@@ -293,7 +296,7 @@ const LandingPage = () => {
           <div className="nx-container">
             <div className="nx-cta nx-reveal">
               <h2>Ready to simplify your hotel operations?</h2>
-              <p>Log in to NexStay and manage reservations, rooms, billing and reports in one place.</p>
+              <p>Log in to MANSIVO and manage reservations, rooms, billing and reports in one place.</p>
               <div className="nx-hero__actions">
                 <a href={LOGIN_URL} className="nx-btn nx-btn--primary nx-btn--lg">Log in <ArrowRight size={18} /></a>
                 <a href="#features" className="nx-btn nx-btn--ghost nx-btn--lg">See features</a>
@@ -309,8 +312,8 @@ const LandingPage = () => {
         <div className="nx-container">
           <div className="nx-footer__grid">
             <div>
-              <a href="/" onClick={handleLogoClick} aria-label="NexStay home">
-                <img src="/LogoH.png" alt="NexStay" />
+              <a href="/" onClick={handleLogoClick} aria-label="MANSIVO home">
+                <img src="/logo2.png" alt="MANSIVO" />
               </a>
               <p>Smart hotel management for modern properties.</p>
             </div>
@@ -338,8 +341,8 @@ const LandingPage = () => {
             </div>
           </div>
           <div className="nx-footer__bottom">
-            <span>© {new Date().getFullYear()} NexStay. All rights reserved.</span>
-            <span>Smart Hotel Management</span>
+            <span>© {new Date().getFullYear()} MANSIVO. All rights reserved.</span>
+            <span>Hotel Management System</span>
           </div>
         </div>
       </footer>
